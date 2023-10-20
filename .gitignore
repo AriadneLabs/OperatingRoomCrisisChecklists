@@ -1,0 +1,8 @@
+.vagrant/
+.vscode/
+config/
+*.log
+__pycache__/
+archive/*.csv
+archive/*.ods
+dev-docker-compose.yml

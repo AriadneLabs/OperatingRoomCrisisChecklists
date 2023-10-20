@@ -1,0 +1,106 @@
+#annotations-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.annotation {
+  position: relative;
+  display: inline-block;
+  z-index: 25;
+  
+}
+
+.annotation-short {
+  height: 1em;
+  width: 1em;
+  font-size: 0.7rem;
+  line-height: 1em;
+  text-align: center;
+  color: black;
+  border-radius: 2em;
+  border: .25em solid #fbb036;
+  background: #fbb036;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.annotation-short:hover {
+  opacity: 0.9;
+}
+
+.annotation-comments {
+  position: absolute;
+  width: 30em;
+  max-height: 20em;
+  padding: 0.5rem;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  border-radius: 0.5em;
+  border: thin solid #58595b;
+  background-color: #EAEAEA;
+}
+
+.annotation-comments-list {
+  margin: 0;
+  padding: 0 0.5em;
+  list-style: none;
+}
+
+.annotation-comment {
+  position: relative;
+  padding: 1em 0;
+  border-top: thin solid #58595b;
+}
+
+.annotation-comment:first-child {
+  border-top: none;
+}
+
+.annotation-comment .user-image,
+.annotation-comment .comment-body {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.annotation-comment .user-image {
+  width: 32px;
+  height: 32px;
+  float: right;
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.annotation-comment .comment-body {
+  width: 25em;
+}
+
+.annotation-comment .comment-info {
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  color: #555;
+}
+
+.annotation-comment .user-name {
+  margin-right: 0.3em;
+  color: steelblue;
+}
+
+.annotation-comment .comment-date {
+  margin-left: 0.3em;
+}
+
+.annotation-comment .comment-message {
+  color: black;
+}
+
+.annotation-comments-list .comment-form {
+  border-top: thin solid #58595b;
+}
+
+.comment-form textarea[name="userComment"] {
+  width: 100%;
+  box-sizing: border-box;
+}

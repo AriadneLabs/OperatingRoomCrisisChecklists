@@ -1,0 +1,80 @@
+@media not print {
+  @media (max-width: 1020px) {
+    #editor-page {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: .25rem 1.5rem;
+    }
+
+    #page-header-title,
+    #page-header-number {
+      vertical-align: top;
+      font-size: 2rem;
+    }
+
+    #page-header-number {
+      width: auto;
+      margin-right: 1em;
+    }
+
+    #page-body-content {
+      height: auto;
+    }
+
+    #page-header-title {}
+
+    .page-body-steps {
+      display: block;
+      float: none;
+      width: 100% !important;
+      margin-right: 0;
+    }
+
+    .reference-content {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .reference-body.horizontal-sections>.reference-section {
+      display: block;
+      width: 100% !important;
+      height: auto;
+      border-left: none;
+      border-top: solid thin #555;
+    }
+
+    .reference-body.horizontal-sections>.reference-section:first-child {
+      border-top: none;
+    }
+
+
+    #page-body-starter {
+      display: none;
+    }
+
+    .airway-fire {
+      border-right: none !important;
+      border-width: 0 !important;
+    }
+
+    .step-sets-header-span-2 {
+      width: 100% !important;
+    }
+
+    .step-sets-header-mobile {
+      border-bottom: none !important;
+      border-width: 0 !important;
+      min-height: 0 !important;
+    }
+
+  }
+}
+
+@media not print {
+  @media (max-width: 760px) {
+    .edit-button {
+      display: none;
+    }
+  }
+}

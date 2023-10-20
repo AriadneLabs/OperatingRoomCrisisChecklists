@@ -1,0 +1,384 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 15px;
+  min-height: 100vh;
+  min-width: 100%;
+  width: 100%;
+  line-height: normal;
+  /* text-rendering: geometricPrecision; */
+  /* seems to make Firefox and Chrome font sizes align */
+}
+
+#top-buttons {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* PAGE
+ * ====
+ */
+
+#editor-page {
+  width: 11in;
+  /* height: 8.5in; */
+  margin: 0 auto;
+  padding: 0.25in 0.5in;
+  box-sizing: border-box;
+  /*border: thin solid black;*/
+}
+
+.or-separator {
+  font-style: italic;
+}
+
+p.or-separator {
+  margin: 0.3em 0;
+  padding: 0;
+}
+
+.reference-section .or-separator {
+  padding-left: 1.5em;
+}
+
+.plain-text {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+p.plain-text {
+  margin: 0;
+  padding: 0;
+}
+
+.severe-warning {
+  font-weight: bold;
+  text-decoration: underline;
+  color: maroon;
+}
+
+*,
+::after,
+::before {
+  box-sizing: content-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* HEADER
+ * ======
+ */
+
+.button {
+  background-color: #787878;
+  border: none;
+  border-radius: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #ffffff;
+  padding: 4px 16px 6px 16px;
+}
+
+.edit-button {
+  background-color: #787878;
+  border: none;
+  border-radius: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #ffffff;
+  padding: 4px 16px 6px 16px;
+}
+
+.print-button {
+  background-color: #787878;
+  border: none;
+  border-radius: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #ffffff;
+  padding: 4px 16px 6px 16px;
+}
+
+#page-header {
+  width: 100%;
+}
+
+#page-header-main-row {
+  width: 100%;
+}
+
+#page-header-number {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 5rem;
+  font-size: 3.75rem;
+  font-weight: bold;
+  color: #787878;
+  line-height: 1em;
+}
+
+#page-header-title {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#page-header-sub-title {
+  padding: 0.25em 0;
+  font-style: italic;
+  color: #555;
+  border-top: thin solid #555;
+  border-bottom: thin solid #555;
+}
+
+#drug-doses .ref-drug-item-name {
+  font-weight: bold;
+}
+
+#drug-doses .ref-drug-item-name em,
+#drug-doses .ref-drug-item-name .normal-weight {
+  font-weight: normal;
+}
+
+@media print {
+  #page-header-sub-title {
+    width: 95%;
+  }
+}
+
+@media print {
+  .index-print {
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 0.1in;
+  }
+
+  .first-index-print {
+    font-size: x-small;
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    right: 0.05in;
+  }
+}
+
+/* web display */
+@media not print {
+  .index-print {
+    display: none;
+  }
+
+  .first-index-print {
+    display: none;
+  }
+}
+
+/* BODY
+ * ====
+ */
+
+#page-body {
+  width: 100%;
+  height: 100%;
+}
+
+#page-body-starter {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#page-body-start-box {
+  display: inline-block;
+  padding: 0.25rem 1.25rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+}
+
+#page-body-content {
+  counter-reset: body-steps;
+  position: relative;
+  width: 100%;
+  height: 6in;
+}
+
+/* PROCEDURE
+* ====
+*/
+
+/* step */
+.page-body-steps {
+  display: inline-block;
+  width: 100%;
+  margin-right: .4in;
+}
+
+.page-body-steps ol {
+  list-style: none;
+  /* Keep using default numbering for IE6/7 */
+  margin: 0;
+  padding: 0;
+}
+
+.page-body-steps ol li {
+  position: relative;
+}
+
+.page-body-steps .step-item:before {
+  position: absolute;
+  content: counter(body-steps);
+  counter-increment: body-steps;
+  margin-top: -0.2em;
+  height: 1.1em;
+  width: 1.1em;
+  line-height: 1.1em;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  border: .25em solid black;
+  background: black;
+}
+
+.page-body-steps .step-item {
+  position: relative;
+}
+
+.page-body-steps .step-item-content {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  padding-left: 2.5em;
+}
+
+.step-item-main {
+  font-weight: bold;
+  font-size: 0.9em !important;
+}
+
+/* sub step */
+.step-item-sub-content {
+  font-size: 0.85em !important;
+  margin: 0.3em 0;
+}
+
+ul.step-actions-list {
+  list-style-image: url("../../build/images/action-list-style.png");
+  margin: 0 0 0 1.2rem;
+  padding: 0;
+}
+
+ul.step-bullet-list {
+  list-style: disc;
+  margin-top: 0.5em;
+  padding-left: 1.5em;
+}
+
+.substep-before-content {
+  text-indent: -13%;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-left: 0.75em;
+}
+
+/* sub sub step */
+.step-actions-list>li ul {
+  /* list-style: square; */
+  list-style-image: url("../../build/images/bullet2.png");
+  padding-left: 1em;
+}
+
+/* sub sub sub step */
+.step-actions-list>li ul>li ul {
+  /* list-style: disc; */
+  list-style-image: url("../../build/images/bullet3.png");
+  padding-left: 1em;
+}
+
+/* sub sub sub sub step */
+.step-actions-list>li ul>li ul>li ul {
+  /* list-style: circle; */
+  list-style-image: url("../../build/images/bullet4.png");
+}
+
+/* other */
+.step-actions-list li {
+  margin: 0.3em 0;
+}
+
+.step-actions-list>li>div {
+  padding-left: 0.25em;
+}
+
+/* disclaimer */
+footer {
+  font-size: xx-small;
+}
+
+.screen-click-only {
+  cursor: pointer;
+}
+
+@media not print {
+  footer {
+    display: none;
+    padding: 0 0 2rem 2rem;
+  }
+}
+
+@media print {
+  footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media print {
+  #editor-page {
+    background-color: white;
+    height: 8.5in;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0%;
+    font-size: 13px;
+  }
+
+  @page {
+    size: landscape;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;
+    /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;
+    /* Firefox 97+, Safari 15.4+ */
+  }
+}

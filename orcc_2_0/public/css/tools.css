@@ -1,0 +1,21 @@
+/* DISPLAY
+ * =======
+ */
+#toolbar {
+  position: fixed;
+  top: -2.3em;
+  left: 0;
+  right: 0;
+  height: 5em;
+  text-align: center;
+}
+
+#display-tools {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-left: thin solid #999;
+  border-right: thin solid #999;
+  border-bottom: thin solid #999;
+}

@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  orcc_app:
+        build:
+            context: ./orcc_2_0 #current dir as build context
+        ports:
+            - "8080:8080"
+   
+        
+  

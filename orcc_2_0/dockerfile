@@ -1,0 +1,15 @@
+FROM node:12-alpine
+WORKDIR /app
+
+COPY package.json ./
+# COPY package-lock.json ./
+RUN npm install
+COPY . ./
+RUN npm install --global sirv-cli
+RUN npm install --global rollup
+EXPOSE 8080
+ENV HOST=0.0.0.0
+RUN npm run build
+CMD ["npm", "start"]
+# CMD ["npm", "run","build"]
+# CMD ["npm", "start"]

@@ -1,0 +1,115 @@
+/* EDITING
+ * =======
+ * this file contains the css associated with editing the main step sets portion
+ * includes deleting, moving, editing, and info icons/boxes
+ */
+
+
+/* move */
+
+.main-step-mover {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+}
+
+.main-step-mover button {
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button.move-up {
+  background: url("images/movable-step-up.png");
+}
+
+button.move-up:active,
+button.move-up:hover {
+  background: url("images/movable-step-up-active.png");
+}
+
+button.move-down {
+  margin-top: 2px;
+  background: url("images/movable-step-down.png");
+}
+
+button.move-down:active,
+button.move-down:hover {
+  background: url("images/movable-step-down-active.png");
+}
+
+/* delete */
+
+button.delete {
+  position: absolute;
+  top: -6px;
+  left: -40px;
+  border: none;
+  background: none;
+}
+
+/* edit */
+
+.edit-box {
+  padding: 2px 4px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 90%;
+  background-color: white;
+}
+
+.edit-box:active {
+  border: 1px solid black;
+}
+
+/* info icon and popup */
+
+button.info {
+  position: absolute;
+  top: -4px;
+  font-size: small;
+  border: none;
+  background: none;
+}
+
+button.info-done {
+  border: 1px solid black;
+  border-radius: 2px;
+  background: white;
+  padding: 2px 4px;
+  font-size: 12px;
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
+
+.infotext-container {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.infotext-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  font-weight: 100;
+}
+
+.fa-circle-info{
+  color: red !important;
+}
