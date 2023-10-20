@@ -6,7 +6,7 @@ The Operating Room Crisis Checklists have been designed and implemented as a res
 
 ## Tech stack
 
-* Languages- Web technologies (Svelte,HTML,CSS, Javascript)
+* Languages- Web technologies (Svelte, HTML, CSS, Javascript)
 * Docker
 * Vagrant
 
@@ -19,15 +19,15 @@ The Operating Room Crisis Checklists have been designed and implemented as a res
 
 ## Installation requirements
 
-### Option1
+### Option 1
 
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)
 * Clone this repo
 * Commands
     * `$ vagrant up`
     * `$ vagrant ssh`
-    * cd to directory
-        * `$ cd ORCC2`
+    * cd to project directory
+        * `$ cd OperatingRoomCrisisChecklists`
     * Build and run the images using docker compose
         * Build using docker compose
             * `$ docker-compose build`
@@ -36,13 +36,13 @@ The Operating Room Crisis Checklists have been designed and implemented as a res
     * [Access ORCC 2](http://192.168.33.20:8080)
     * If using Chrome for dev, might need to enable chrome flag for [insecure origin to be treated as secure](chrome://flags/#unsafely-treat-insecure-origin-as-secure). Add URL http://192.168.33.20:8080 as origin.
 
-### Option2
+### Option 2
 
 * Install [Docker](https://docs.docker.com/get-docker/) 
 * Clone this repo
 * Commands    
-    * cd to directory (either orcc_2 depending on dir name)
-        * `$ cd orcc_2`
+    * cd to project directory
+        * `$ cd OperatingRoomCrisisChecklists`
     * Build and run the images using docker compose
         * Build using docker compose
             * `$ docker-compose build`
