@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder ".", "/home/vagrant/ORCC2",
+  config.vm.synced_folder ".", "/home/vagrant/OperatingRoomCrisisChecklists",
     mount_options: ["dmode=775,fmode=664"]
    
     
